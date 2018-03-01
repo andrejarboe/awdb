@@ -10,6 +10,18 @@
 <body>
   <div id="app"></div>
   <script type="text/javascript">
+    class Pet extends React.Component {
+      render() {
+        const h2 = ReactDOMFactories.h2(null, "Samson");
+        const img = ReactDOMFactories.img({
+          src: "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg",
+          alt: "Samson my dog"
+        });
+        return ReactDOMFactories.div(null, h2, img);
+      }
+    };
+
+    ReactDOM.render(React.createElement(Pet), document.getElementById('app'));
   </script>
 </body>
 </html>
